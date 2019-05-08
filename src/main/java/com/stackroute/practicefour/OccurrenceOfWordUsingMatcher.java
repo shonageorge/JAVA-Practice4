@@ -11,14 +11,14 @@ public class OccurrenceOfWordUsingMatcher {
 
     public static void main(String[] args) {
 
-        Scanner scanner=new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the string");
-        String string=scanner.nextLine();                                            //Reading input as String
+        String string = scanner.nextLine();                                            //Reading input as String
         System.out.println("Enter the pattern to be searched");
-        String searchElement=scanner.nextLine();
+        String searchElement = scanner.nextLine();
 
-        Pattern pattern=Pattern.compile(searchElement);                               //entering the word to be searched in pattern
-        Matcher m=pattern.matcher(string);                                            //cheking if the pattern matches the string
+        Pattern pattern = Pattern.compile(searchElement);                               //entering the word to be searched in pattern
+        Matcher m = pattern.matcher(string);                                            //cheking if the pattern matches the string
 
         while (m.find()) {
             System.out.println("found at" + m.start() + "-" + m.end());               //printing the starting position and ending position when the pattern is found

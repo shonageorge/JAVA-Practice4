@@ -11,17 +11,18 @@ import java.util.regex.Pattern;
 //        Harry in a string.
 public class RegularExpressionForNameSearch {
     public static void main(String[] args) {
-        boolean flag=false;
-        Scanner scanner=new Scanner(System.in);
+        boolean flag = false;
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the string");
 
-       String sentance=scanner.nextLine();                                   //reading string
+        String sentance = scanner.nextLine();                                   //reading string
 
-        Pattern pattern=Pattern.compile("Harry");                            //pattern is set as Harry
-        Matcher m=pattern.matcher(sentance);
+        Pattern pattern = Pattern.compile("Harry");                            //pattern is set as Harry
+        Matcher m = pattern.matcher(sentance);
         if (m.find())                                                        //if pattern present in the string return true
-            flag=true;
+            flag = true;
 
-        System.out.println(flag);
+        System.out.println("Is Harry here?" + flag);
+
     }
 }

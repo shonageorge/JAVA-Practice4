@@ -13,27 +13,27 @@ import java.util.TreeMap;
 public class OccuranceCountWithoutLoop {
 
     public static void main(String[] args) {
-        Scanner s=new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the String : ");
-        String string=s.nextLine();
+        String string = scanner.nextLine();
         System.out.print("Enter the character to check the occurance : ");
-        char charocc=s.next().charAt(0);                                             //reading the input as character
+        char charocc = scanner.next().charAt(0);                                             //reading the input as character
 
-        char[] characterArray=string.toCharArray();                                   //converting string to char array
+        char[] characterArray = string.toCharArray();                                   //converting string to char array
 
-        Map<Character,Integer> hashmap=new HashMap<>();
+        Map<Character, Integer> hashmap = new HashMap<>();
 
 
-        for(char e:characterArray){
+        for (char e : characterArray) {
 
-            if(hashmap.containsKey(e))                                              //checking the occurance of chatacter in hashmap
-               hashmap.put(e ,hashmap.get(e)+1);
+            if (hashmap.containsKey(e))                                              //checking the occurance of chatacter in hashmap
+                hashmap.put(e, hashmap.get(e) + 1);
             else
-                hashmap.put(e,1);
+                hashmap.put(e, 1);
 
 
         }
-        System.out.println("occurance of "+charocc+" is : "+hashmap.get(charocc));
+        System.out.println("occurance of " + charocc + " is : " + hashmap.get(charocc));
 
     }
 }
